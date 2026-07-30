@@ -80,3 +80,57 @@ const counterObserver = new IntersectionObserver((entries) => {
 });
 
 counters.forEach(counter => counterObserver.observe(counter));
+const slider = document.querySelector(".testimonial-slider");
+
+if (slider) {
+
+let autoScroll = setInterval(() => {
+
+    if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5) {
+
+        slider.scrollTo({
+            left: 0,
+            behavior: "smooth"
+        });
+
+    } else {
+
+        slider.scrollBy({
+            left: 344,
+            behavior: "smooth"
+        });
+
+    }
+
+}, 2500);
+
+// Mobile swipe ke time auto pause
+slider.addEventListener("touchstart", () => {
+    clearInterval(autoScroll);
+});
+
+slider.addEventListener("touchend", () => {
+
+    autoScroll = setInterval(() => {
+
+        if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 5) {
+
+            slider.scrollTo({
+                left: 0,
+                behavior: "smooth"
+            });
+
+        } else {
+
+            slider.scrollBy({
+                left: 344,
+                behavior: "smooth"
+            });
+
+        }
+
+    }, 2500);
+
+});
+
+}
