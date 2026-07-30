@@ -693,3 +693,26 @@ letter-spacing:.4px;
 .project-card:hover{
 transform:translateY(-12px) scale(1.03);
                 }
+.testimonial-slider{
+display:flex;
+gap:24px;
+overflow-x:auto;
+scroll-behavior:smooth;
+scrollbar-width:none;
+padding:20px 5px;
+}
+
+.testimonial-slider::-webkit-scrollbar{
+display:none;
+}
+
+.testimonial-card{
+min-width:320px;
+flex-shrink:0;
+}
+
+@media(max-width:768px){
+.testimonial-card{
+min-width:90%;
+}
+  }
