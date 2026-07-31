@@ -893,3 +893,39 @@ font-size:34px;
 }
 
   }
+/* ===== Hamburger Menu ===== */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+color:#fff;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+position:fixed;
+top:75px;
+right:-100%;
+width:250px;
+height:auto;
+background:#111827;
+padding:25px;
+display:flex;
+flex-direction:column;
+gap:20px;
+border-radius:15px;
+transition:right .35s ease;
+z-index:999;
+}
+
+.nav-links.active{
+right:15px;
+}
+
+}
