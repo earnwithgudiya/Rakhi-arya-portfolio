@@ -1,4 +1,4 @@
-*{
+⁸*{
   font-family:'Poppins',sans-serif;
     margin:0;
     padding:0;
@@ -127,10 +127,11 @@ width:100%;
 .btn:hover{
     transform:translateY(-3px);
 }
-
 .btn-outline{
     background:transparent;
     border:2px solid #7c5cff;
+    color:white;
+}
 
 .about{
     padding:120px 10%;
